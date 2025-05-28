@@ -1,10 +1,8 @@
 import telebot
 import requests
-from config import 669342765:AAEFg-16hJKgkMx0AbBzKY7d1o7-PYqpv_g
-, 418784159
+from config import BOT_TOKEN, ADMIN_ID
 
-bot = telebot.TeleBot(669342765:AAEFg-16hJKgkMx0AbBzKY7d1o7-PYqpv_g
-)
+bot = telebot.TeleBot(BOT_TOKEN)
 welcome_message = "سلام! لینک اینستاگرام رو بفرست تا برات دانلودش کنم."
 
 @bot.message_handler(commands=['start'])
@@ -13,7 +11,7 @@ def send_welcome(message):
 
 @bot.message_handler(commands=['settext'])
 def set_text(message):
-    if message.from_user.id == 418784159:
+    if message.from_user.id == ADMIN_ID:
         global welcome_message
         welcome_message = message.text.replace('/settext', '').strip()
         bot.reply_to(message, "✅ متن خوش‌آمدگویی با موفقیت تغییر کرد.")
