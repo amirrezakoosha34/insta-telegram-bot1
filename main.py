@@ -1,4 +1,3 @@
-
 import telebot
 import requests
 from config import 669342765:AAEFg-16hJKgkMx0AbBzKY7d1o7-PYqpv_g
