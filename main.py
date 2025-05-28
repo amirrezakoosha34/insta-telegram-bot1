@@ -48,7 +48,6 @@ def download_instagram(message):
     except Exception as e:
         bot.send_message(message.chat.id, f"❌ خطا: {str(e)}")
 
-bot.polling()
 import time
 while True:
     try:
